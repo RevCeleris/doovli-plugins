@@ -1,6 +1,6 @@
 ---
 name: set-up
-description: Sets up Topics Hub with Timeback Machine™ for the person: asks five quick questions, publishes their Topics Hub page, pins it, turns on the daily Timeback Machine™ check, and files their past Claude work by subject. Use when someone asks to install, set up or reinstall Topics Hub or Timeback Machine, or to turn on its daily check.
+description: "Sets up Topics Hub with Timeback Machine™ for the person: asks five quick questions, publishes their Topics Hub page, pins it, turns on the daily Timeback Machine™ check, and files their past Claude work by subject. Use when someone asks to install, set up or reinstall Topics Hub or Timeback Machine, or to turn on its daily check."
 ---
 
 # Set up Topics Hub with Timeback Machine™
@@ -12,14 +12,17 @@ Work through the steps in order. Ask me questions only in Step 1, and stop for m
 
 ## Step 0. Get the files
 
-Two files come with this skill, in its assets folder: assets/topics.html (the page) and assets/daily.txt (the task text). Read both complete from the skill folder with your code tools. Never retype or summarize them.
-
-If you cannot read them from the skill folder, download the same two files with your code tools instead:
+The task text comes with this skill: assets/daily.txt in its skill folder. Read it complete with your code tools. Download the page file with your code tools (for example curl):
 
 - https://raw.githubusercontent.com/RevCeleris/topics-timeback/main/topics.html
+
+If you cannot read assets/daily.txt from the skill folder, download it too:
+
 - https://raw.githubusercontent.com/RevCeleris/topics-timeback/main/tasks/daily.txt
 
-Check that topics.html contains const APP_VERSION="1.2" and that daily.txt contains the heading DAILY. If neither route works, tell me in one sentence and point me to the manual install at https://doovli.app/topics-hub.html. Otherwise go on to Step 1 without mentioning the files.
+Never retype or summarize either file.
+
+Check that topics.html contains const APP_VERSION="1.2" and that daily.txt contains the heading DAILY. If you cannot get both files, tell me in one sentence and point me to the manual install at https://doovli.app/topics-hub.html. Otherwise go on to Step 1 without mentioning the files.
 
 ## Rules for everything you write
 
