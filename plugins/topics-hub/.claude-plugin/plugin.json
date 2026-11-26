@@ -13,6 +13,7 @@
   "icon": "./.claude-plugin/icon.png",
   "documentationUrl": "https://doovli.app/topics-hub.html",
   "supportUrl": "https://www.linkedin.com/company/doovli/",
+  "privacyPolicyUrl": "https://github.com/RevCeleris/doovli-plugins/blob/main/plugins/topics-hub/PRIVACY.md",
   "keywords": [
     "organize",
     "topics",
