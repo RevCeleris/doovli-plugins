@@ -15,3 +15,7 @@ Everything stays in your own Claude account. Timeback Machine™ reads only the 
 To add it in Claude Code, run: /plugin install topics-hub --marketplace RevCeleris/doovli-plugins
 
 Learn more at https://doovli.app/topics-hub.html. Created by Rich Henderson. Shared under CC BY-NC 4.0.
+
+## Privacy
+
+[Privacy policy](https://github.com/RevCeleris/doovli-plugins/blob/main/plugins/topics-hub/PRIVACY.md): everything stays in your own Claude account, and nothing is sent to Doovli.
