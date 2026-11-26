@@ -1,12 +1,12 @@
 ---
 name: set-up
-description: Sets up Topics Hub with Hour Finder™ for the person: asks five quick questions, publishes their Topics Hub page, pins it, turns on the daily Hour Finder™ check, and files their past Claude work by subject. Use when someone asks to install, set up or reinstall Topics Hub or Hour Finder, or to turn on its daily check.
+description: Sets up Topics Hub with Timeback Machine™ for the person: asks five quick questions, publishes their Topics Hub page, pins it, turns on the daily Timeback Machine™ check, and files their past Claude work by subject. Use when someone asks to install, set up or reinstall Topics Hub or Timeback Machine, or to turn on its daily check.
 ---
 
-# Set up Topics Hub with Hour Finder™
+# Set up Topics Hub with Timeback Machine™
 
-Version 1.3. (c) 2026 Rich Henderson. Shared under CC BY-NC 4.0: free to use and adapt for your own work, with credit. Not for resale or use in a paid product.
-You are setting up Topics Hub with Hour Finder™, version 1.3, for me, using the Topics Hub plugin I added to Claude. Topics Hub files my Claude work under the subjects I keep coming back to, so I can find things again. Hour Finder™ is its daily check: it files new work, suggests a topic hub when a subject keeps coming up, keeps those hubs current, and suggests ways to automate work I keep repeating. It only suggests. I approve everything on the page.
+Version 1.2. (c) 2026 Rich Henderson. Shared under CC BY-NC 4.0: free to use and adapt for your own work, with credit. Not for resale or use in a paid product.
+You are setting up Topics Hub with Timeback Machine™, version 1.2, for me, using the Topics Hub plugin I added to Claude. Topics Hub files my Claude work under the subjects I keep coming back to, so I can find things again. Timeback Machine™ is its daily check: it files new work, suggests a topic hub when a subject keeps coming up, keeps those hubs current, and suggests ways to automate work I keep repeating. It only suggests. I approve everything on the page.
 
 Work through the steps in order. Ask me questions only in Step 1, and stop for my answer only there. Write to me in plain language, with no em dashes.
 
@@ -16,10 +16,10 @@ Two files come with this skill, in its assets folder: assets/topics.html (the pa
 
 If you cannot read them from the skill folder, download the same two files with your code tools instead:
 
-- https://raw.githubusercontent.com/RevCeleris/topics-hour-finder/main/topics.html
-- https://raw.githubusercontent.com/RevCeleris/topics-hour-finder/main/tasks/daily.txt
+- https://raw.githubusercontent.com/RevCeleris/topics-timeback/main/topics.html
+- https://raw.githubusercontent.com/RevCeleris/topics-timeback/main/tasks/daily.txt
 
-Check that topics.html contains const APP_VERSION="1.3" and that daily.txt contains the heading DAILY. If neither route works, tell me in one sentence and point me to the manual install at https://doovli.app/topics-hub.html. Otherwise go on to Step 1 without mentioning the files.
+Check that topics.html contains const APP_VERSION="1.2" and that daily.txt contains the heading DAILY. If neither route works, tell me in one sentence and point me to the manual install at https://doovli.app/topics-hub.html. Otherwise go on to Step 1 without mentioning the files.
 
 ## Rules for everything you write
 
@@ -37,7 +37,7 @@ Then ask the five questions below. If you have a tool that shows me clickable ch
 1. Page name. Choices: my first name from my Claude profile (default), or type another.
 2. Time zone. Choices: the time zone my messages show (default), or type a city.
 3. Daily check time. Choices: 3 PM (default), 9 AM, 12 PM, 6 PM.
-4. Extra sources. Besides my Claude chats and artifacts, may Hour Finder™ also read my email, calendar or Google Drive? Offer only the ones connected here. Choices: none, chats and artifacts only (default), or any of the connected ones (allow more than one).
+4. Extra sources. Besides my Claude chats and artifacts, may Timeback Machine™ also read my email, calendar or Google Drive? Offer only the ones connected here. Choices: none, chats and artifacts only (default), or any of the connected ones (allow more than one).
 5. First look. How far back should it go? Choices: Last 90 days (default, fastest), Last 6 months, Last year, Everything. Under the question, add one line: the further back, the longer the first look takes, and I can leave the tab open and come back.
 Treat a blank answer as the default and go on.
 
@@ -64,11 +64,11 @@ Also write topicsUrl (my page link) to settings/main. If priorInventionsUrl is s
 
 ## Step 4. Turn on the daily check
 
-Do this now, before the first look, without asking me. Tell me in one sentence: "Turning on your Hour Finder™ daily check for [my time] each day."
+Do this now, before the first look, without asking me. Tell me in one sentence: "Turning on your Timeback Machine™ daily check for [my time] each day."
 
-If a scheduled task named "Hour Finder" already exists for this page, reuse it. Otherwise create a scheduled task named "Hour Finder" that runs every day at the time I chose, moved a few minutes off the hour (3:04 PM for 3 PM), in my time zone, with push notifications on. Use the task text as its instructions, with every {{NAME}} replaced by my name, {{TIMEZONE}} by my time zone, {{TOPICS_URL}} by my page link and {{SOURCES}} by the sources I allowed. Give it access to my artifact data, the scheduled-tasks connector and past-chat search, plus only the connectors I allowed in Step 1. Turn off every other connector for this task.
+If a scheduled task named "Timeback Machine" already exists for this page, reuse it. Otherwise create a scheduled task named "Timeback Machine" that runs every day at the time I chose, moved a few minutes off the hour (3:04 PM for 3 PM), in my time zone, with push notifications on. Use the task text as its instructions, with every {{NAME}} replaced by my name, {{TIMEZONE}} by my time zone, {{TOPICS_URL}} by my page link and {{SOURCES}} by the sources I allowed. Give it access to my artifact data, the scheduled-tasks connector and past-chat search, plus only the connectors I allowed in Step 1. Turn off every other connector for this task.
 
-Write the task ID to my page as settings/tasks: {daily: the task ID}, and write settings/update: {installed: "1.3"}. My page then shows that the daily check is on.
+Write the task ID to my page as settings/tasks: {daily: the task ID}, and write settings/update: {installed: "1.2"}. My page then shows that the daily check is on.
 
 If you cannot create scheduled tasks here, tell me in one sentence that my page will show a Turn it on button, and go on with the next step.
 
@@ -81,15 +81,15 @@ This first look is what I will see when I open the page, so be thorough. Follow 
 - Look back as far as I chose in Step 1 (90 days, 6 months, a year, or everything) instead of to the last run: list my artifacts, and search and list my chats as far back as your tools reach in that window. For a long window, work through it in date order, oldest first, and write cards as you go so the page fills in while you work. Note how far back you got.
 - In step 1, file every artifact as a card and give it the topics it belongs to. Create topic names as you need them: short, plain names a person would use, such as "Home remodel" or "Board reporting". Use no more than 12 topics; put the rest under Unsorted by leaving topics empty.
 - In step 2, suggest up to 5 hubs, strongest first. Do not build any hub yet.
-- In step 4, suggest up to 3 Hour Finder™ fixes, the clearest first.
+- In step 4, suggest up to 3 Timeback Machine™ fixes, the clearest first.
 
 Then write meta/sync with lastRun (for example "today at 3:04 PM") and a one-line summary.
 
-Send me a short message with: the link to my page; how many items you filed and under how many topics; how many hubs and Hour Finder™ fixes you suggest; how far back you looked; and what to do next: open the page, look at Suggestions, and press Create hub, Not now or Never on each.
+Send me a short message with: the link to my page; how many items you filed and under how many topics; how many hubs and Timeback Machine™ fixes you suggest; how far back you looked; and what to do next: open the page, look at Suggestions, and press Create hub, Not now or Never on each.
 
 ## Step 6. Finish
 
-Send me four short lines on how to use the page: Suggestions is where Hour Finder™ asks before doing anything; drag a card onto a topic, or tick several cards, to file or archive them; and the search box answers questions about my work. End with the page link. Also tell me that the Add to my desktop button at the top right of the page puts it on my desktop, shelf or taskbar in two clicks.
+Send me four short lines on how to use the page: Suggestions is where Timeback Machine™ asks before doing anything; drag a card onto a topic, or tick several cards, to file or archive them; and the search box answers questions about my work. End with the page link. Also tell me that the Add to my desktop button at the top right of the page puts it on my desktop, shelf or taskbar in two clicks.
 
 ## Turn on the daily check
 

@@ -4,7 +4,7 @@ Free Claude plugins from Doovli, created by Rich Henderson.
 
 | Plugin | What it does |
 | --- | --- |
-| Topics Hub with Hour Finder™ | Organizes your Claude chats and everything you've made under the subjects you keep coming back to, keeps a self-updating hub page for each one, and checks your work daily for time it can give back. |
+| Topics Hub with Timeback Machine™ | Organizes your Claude chats and everything you've made under the subjects you keep coming back to, keeps a self-updating hub page for each one, and checks your work daily for time it can give back. |
 
 Prior Inventions and the Career Opportunity Tracker are coming next.
 

@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "topics-hub",
-      "displayName": "Topics Hub with Hour Finder™",
+      "displayName": "Topics Hub with Timeback Machine™",
       "source": "./plugins/topics-hub",
       "description": "Organizes your Claude work by subject and checks it daily for time it can give back."
     }

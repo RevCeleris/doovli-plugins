@@ -1,8 +1,8 @@
-# Topics Hub with Hour Finder™
+# Topics Hub with Timeback Machine™
 
 Your Claude chats and files pile up fast. Topics Hub scans your Claude chats and everything you have made with Claude, as far back as you choose, and organizes them under the subjects you keep coming back to, so you can find anything quickly.
 
-Every day, Hour Finder™ looks at your new work, suggests a topic hub when a subject keeps coming up, keeps each hub current, and suggests ways to automate work you keep repeating, with an estimate of the hours it would give back. Nothing happens until you approve it.
+Every day, Timeback Machine™ looks at your new work, suggests a topic hub when a subject keeps coming up, keeps each hub current, and suggests ways to automate work you keep repeating, with an estimate of the hours it would give back. Nothing happens until you approve it.
 
 ## How to use it
 
@@ -10,7 +10,7 @@ After you add the plugin, start a new chat and type "Set up my Topics Hub." Clau
 
 ## Privacy
 
-Everything stays in your own Claude account. Hour Finder™ reads only the sources you allow, skips personal matters, never deletes anything, and waits for your approval on every suggestion.
+Everything stays in your own Claude account. Timeback Machine™ reads only the sources you allow, skips personal matters, never deletes anything, and waits for your approval on every suggestion.
 
 To add it in Claude Code, run: /plugin install topics-hub --marketplace RevCeleris/doovli-plugins
 
