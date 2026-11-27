@@ -1,7 +1,7 @@
 {
-  "name": "prior-inventions",
-  "displayName": "Prior Inventions",
-  "description": "Prior Inventions. Finds what you built on your own in Claude, dates each item from a record you can check, and builds the list of prior inventions an employment or contractor agreement asks for, with a Word or PDF exhibit for your employer. Nothing goes on the list until you approve it. Not legal advice.",
+  "name": "prior-inventions-tracker",
+  "displayName": "Prior Inventions Tracker",
+  "description": "Prior Inventions Tracker. Finds what you built on your own in Claude, dates each item from a record you can check, and builds the list of prior inventions an employment or contractor agreement asks for, with a Word or PDF exhibit for your employer. Nothing goes on the list until you approve it. Not legal advice.",
   "version": "2.1.0",
   "author": {
     "name": "Rich Henderson",
@@ -13,7 +13,7 @@
   "icon": "./.claude-plugin/icon.png",
   "documentationUrl": "https://doovli.app/prior-inventions.html",
   "supportUrl": "https://www.linkedin.com/company/doovli/",
-  "privacyPolicyUrl": "https://github.com/RevCeleris/doovli-plugins/blob/main/plugins/prior-inventions/PRIVACY.md",
+  "privacyPolicyUrl": "https://github.com/RevCeleris/doovli-plugins/blob/main/plugins/prior-inventions-tracker/PRIVACY.md",
   "keywords": [
     "prior inventions",
     "employment agreement",

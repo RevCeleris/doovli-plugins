@@ -1,23 +1,23 @@
 ---
 name: set-up
-description: "Sets up Prior Inventions for the person: asks six short questions, finds what they built on their own in Claude, dates each item from a record, publishes their Prior Inventions page and turns on monthly updates. Use when someone asks to set up, install or build Prior Inventions, to move or switch an existing Prior Inventions page or doc to the plugin, or to update their Prior Inventions page."
+description: "Sets up the Prior Inventions Tracker for the person: asks six short questions, finds what they built on their own in Claude, dates each item from a record, publishes their Prior Inventions page and turns on monthly updates. Use when someone asks to set up, install or build the Prior Inventions Tracker or a prior inventions list, to move or switch an existing Prior Inventions page or doc to the plugin, or to update their Prior Inventions Tracker."
 ---
 
-# Set up Prior Inventions
+# Set up the Prior Inventions Tracker
 
 Version 2.1.0. (c) 2026 Rich Henderson. Shared under CC BY-NC 4.0: free to use and adapt for your own records, with credit. Not for resale or use in a paid product. Provided as is, with no warranty. Not legal advice.
 
-You are setting up Prior Inventions, version 2.1.0, for me, using the Prior Inventions plugin I added to Claude. A prior invention is something I created before starting a new job or contract that I believe I own: an app, a tool, a skill, a prompt, a method, or a design I have not built yet. Employment and contractor agreements often ask for a list of these. Your job is to find my candidates, date each one from a record, and save them to my own Prior Inventions page, where I approve them, keep them current and download the Exhibit for an employer.
+You are setting up the Prior Inventions Tracker, version 2.1.0, for me, using the Prior Inventions Tracker plugin I added to Claude. A prior invention is something I created before starting a new job or contract that I believe I own: an app, a tool, a skill, a prompt, a method, or a design I have not built yet. Employment and contractor agreements often ask for a list of these. Your job is to find my candidates, date each one from a record, and save them to my own Prior Inventions Tracker page, where I approve them, keep them current and download the Exhibit for an employer.
 
 Work through the steps in order. Ask me questions only in Step 1, and stop for my answer only where the steps say to. Write to me in plain language, with no em dashes. You are not a lawyer and none of this is legal advice. Say so once, in the message that ends Step 4.
 
-If I already have a Prior Inventions page from the download version and want to switch to this plugin, follow "Switching from the download version" at the end instead of the steps below.
+If I already have a Prior Inventions page from the download version and want to switch to this plugin, or I ask to switch it, follow "Switching from the download version" at the end instead of the steps below.
 
 ## Step 0. Get the files
 
 These files come with this skill, in its assets folder: prior-inventions.html (the page), a lib folder of script files the page loads, update.txt (the monthly update task) and version.json. Read prior-inventions.html and update.txt complete from the skill folder with your code tools. Never retype, summarize or edit them, and never download them from anywhere else.
 
-Check that prior-inventions.html contains const APP_VERSION="2.1.0". If you cannot read the files, tell me in one sentence that the plugin's files are missing and that removing and adding the Prior Inventions plugin again should fix it, then stop. Otherwise go on to Step 1 without mentioning the files.
+Check that prior-inventions.html contains const APP_VERSION="2.1.0". If you cannot read the files, tell me in one sentence that the plugin's files are missing and that removing and adding the Prior Inventions Tracker plugin again should fix it, then stop. Otherwise go on to Step 1 without mentioning the files.
 
 ## Rules for everything you write
 
@@ -64,7 +64,7 @@ Suggest In, Out or Discuss for each candidate, with a one-line reason in its not
 
 ## Step 3. Publish my page
 
-Publish a new artifact titled "[my name] - Prior Inventions" from files, using your artifact tool's option to publish from files: prior-inventions.html exactly as it is, served as index.html, and every file in the assets lib folder exactly as it is, served as lib/<file name>. Do not edit, shorten or restyle any of them. The page needs the lib files to make its Word and PDF downloads.
+Publish a new artifact titled "[my name] - Prior Inventions Tracker" from files, using your artifact tool's option to publish from files: prior-inventions.html exactly as it is, served as index.html, and every file in the assets lib folder exactly as it is, served as lib/<file name>. Do not edit, shorten or restyle any of them. The page needs the lib files to make its Word and PDF downloads.
 
 Give the page these capabilities, declaring them if your artifact tool asks for that:
 
@@ -114,13 +114,13 @@ Ask whether I want a design document for any item marked In. If I do, create eac
 
 Ask me first, in one short message: "Create the monthly update check? It runs on the 1st of each month, tells you when a new version is out, and makes the Update now button on your page work. Reply yes." Wait for my answer. If I do not say yes, skip to the last item of this step.
 
-Create a scheduled task named "Prior Inventions Updates" that runs on the 1st of each month, mid-morning in my time zone, on a minute that is not on the hour or half hour (10:17, not 10:00), with push notifications on. Use update.txt from Step 0 as its instructions, with every {{PAGE_URL}} replaced by my page link and every {{TIMEZONE}} by my time zone. Give it access to my artifact data and to the scheduled-tasks connector only. Turn off every other connector for this task.
+Create a scheduled task named "Prior Inventions Tracker Updates" that runs on the 1st of each month, mid-morning in my time zone, on a minute that is not on the hour or half hour (10:17, not 10:00), with push notifications on. Use update.txt from Step 0 as its instructions, with every {{PAGE_URL}} replaced by my page link and every {{TIMEZONE}} by my time zone. Give it access to my artifact data and to the scheduled-tasks connector only. Turn off every other connector for this task.
 
 Write the task ID to my page as document "settings/tasks": {update: the task ID}. The page's Update now button uses it. Also write document "settings/update": {installed: "2.1.0"}.
 
 Tell me in one line that Claude checks for a new version once a month, sends me a notification when one is out, and that I install it by opening my page and clicking Update now.
 
-If I said no, or you cannot create scheduled tasks here, tell me that I can still update any time by starting a new chat and sending "Update my Prior Inventions page."
+If I said no, or you cannot create scheduled tasks here, tell me that I can still update any time by starting a new chat and sending "Update my Prior Inventions Tracker."
 
 ## Moving from version 1
 
@@ -139,7 +139,7 @@ Follow this instead of Steps 2, 4, 5 and 6 when I am moving from version 1. Neve
 
 Follow this when I already have a Prior Inventions page built from the download (version 2.0 or later) and want it to run from this plugin. Ask me nothing unless something below is missing. Never change the page's data.
 
-1. Find my page: list my artifacts and use the web page whose title ends in "Prior Inventions". If there is more than one, ask me which. Read its settings/main, settings/tasks and settings/update.
+1. Find my page: list my artifacts and use the web page whose title ends in "Prior Inventions" or "Prior Inventions Tracker". If there is more than one, ask me which. Read its settings/main, settings/tasks and settings/update.
 2. Publish a new version of that page from files, as in Step 3, keeping its title and its current capabilities. Do not create a new artifact.
 3. If settings/tasks has an update task ID and that scheduled task still exists, replace its instructions with update.txt from Step 0, with {{PAGE_URL}} replaced by my page link and {{TIMEZONE}} by the timezone in settings/main, using update_trigger. Keep its name and schedule. If there is no task, do Step 8.
 4. Update settings/update: installed "2.1.0", keeping its other fields.
@@ -148,7 +148,7 @@ Follow this when I already have a Prior Inventions page built from the download 
 
 ## Updating my page
 
-When I say "Update my Prior Inventions page": get document "settings/tasks" on my page. If it has an "update" task ID, write document "activity/a-<timestamp>" with kind "update", label "Update to the latest version", status "running" and startedAt ISO now, then start that scheduled task with a two-line message: "ACTIVITY ID: a-<timestamp>" on the first line and "MODE: APPLY UPDATE" on the second, and tell me to reload my page when the notification arrives. If there is no task, or you cannot start it, follow APPLY MODE in update.txt yourself, with my page link and time zone, skipping any step about a scheduled task.
+When I say "Update my Prior Inventions Tracker" or "Update my Prior Inventions page": get document "settings/tasks" on my page. If it has an "update" task ID, write document "activity/a-<timestamp>" with kind "update", label "Update to the latest version", status "running" and startedAt ISO now, then start that scheduled task with a two-line message: "ACTIVITY ID: a-<timestamp>" on the first line and "MODE: APPLY UPDATE" on the second, and tell me to reload my page when the notification arrives. If there is no task, or you cannot start it, follow APPLY MODE in update.txt yourself, with my page link and time zone, skipping any step about a scheduled task.
 
 ## Design document layout
 

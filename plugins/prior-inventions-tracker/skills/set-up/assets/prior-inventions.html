@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Prior Inventions</title>
+<title>Prior Inventions Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,600&display=swap">
 <style>
@@ -72,7 +72,7 @@ footer{text-align:center;font-size:12px;color:var(--muted)}
 <div class="wrap">
   <header>
     <p class="notice">Free for personal use only. To share it, send people to <a href="https://doovli.app/prior-inventions.html" target="_blank" rel="noopener">doovli.app</a>. Not for sale or use in a paid product. Not legal advice.</p>
-    <h1 id="title">Prior Inventions</h1>
+    <h1 id="title">Prior Inventions Tracker</h1>
     <p class="sub">What you built before a new job or contract, dated from your own records. Approve each item on the Approval List. The Register keeps the full detail for you, and the Exhibit is the short list you give an employer.</p>
   </header>
 
@@ -127,9 +127,9 @@ window.addEventListener("hashchange",()=>showTab(location.hash.replace("#","")))
 /* ---------- render ---------- */
 function renderAll(){
   const name=S.main.name||"";
-  $("title").textContent=name?name+" - Prior Inventions":"Prior Inventions";
+  $("title").textContent=name?name+" - Prior Inventions Tracker":"Prior Inventions Tracker";
   document.title=$("title").textContent;
-  $("foot").textContent="Prior Inventions, version "+APP_VERSION+". (c) 2026 Rich Henderson. CC BY-NC 4.0.";
+  $("foot").textContent="Prior Inventions Tracker, version "+APP_VERSION+". (c) 2026 Rich Henderson. CC BY-NC 4.0.";
   renderUpdate();renderDashboard();renderApproval();renderRegister();renderExhibit();
   const open=S.items.filter(i=>!/^(in|out)$/i.test(i.include||"")).length;
   $("ap-badge").hidden=!open;$("ap-badge").textContent=open;
@@ -140,7 +140,7 @@ function renderUpdate(){
   if(!u.version||vcmp(u.version,APP_VERSION)<=0||u.dismissed===u.version||!S.canWrite){b.hidden=true;return}
   b.hidden=false;b.className="banner";
   const canRun=!!(S.mcp&&S.tasks.update);
-  b.innerHTML='<span><b>Version '+esc(u.version)+' is ready.</b> '+esc(u.notes||"")+(canRun?'':' To install it, start a new chat in Claude and send: Update my Prior Inventions page.')+'</span><span class="rowb">'+(canRun?'<button class="btn primary" id="update-now" type="button">Update now</button>':'')+'<button class="btn" id="update-later" type="button">Not now</button><span id="update-msg" class="note"></span></span>';
+  b.innerHTML='<span><b>Version '+esc(u.version)+' is ready.</b> '+esc(u.notes||"")+(canRun?'':' To install it, start a new chat in Claude and send: Update my Prior Inventions Tracker.')+'</span><span class="rowb">'+(canRun?'<button class="btn primary" id="update-now" type="button">Update now</button>':'')+'<button class="btn" id="update-later" type="button">Not now</button><span id="update-msg" class="note"></span></span>';
   const un=$("update-now");if(un)un.onclick=async()=>{un.disabled=true;$("update-msg").textContent="Starting the update...";
     try{const id="a-"+Date.now();await S.db.doc("activity/"+id).set({kind:"update",label:"Update to version "+u.version,status:"running",startedAt:nowIso()});
       await S.mcp.callTool("Claude Code Remote","fire_trigger",{trigger_id:S.tasks.update,text:"ACTIVITY ID: "+id+"\nMODE: APPLY UPDATE\nVERSION: "+u.version},{cache:false});
@@ -160,7 +160,7 @@ function renderDashboard(){
   let h='<div class="strip">'+[["In",c.In],["Out",c.Out],["Discuss",c.Discuss],["Not set",c.none],["Dates to confirm",c.confirm]].map(x=>'<div class="stat"><b>'+x[1]+'</b><span>'+x[0]+'</span></div>').join("")+'</div>';
   h+='<div class="panel"><h3>Next step</h3><p style="margin:0">'+esc(next)+'</p></div>';
   h+='<div class="panel"><h3>Document control</h3><div class="tw"><table class="t"><tbody>'+
-    [["Document ID",m.docId||"Not set"],["Owner",(m.name||"")+(m.name?". Every item on this list is owned by "+m.name+" personally.":"")],["Classification","Confidential (Approval List and Register). The Exhibit is written for disclosure."],["Current version",m.docVersion||"0.1 (Draft, becomes 1.0 on approval)"],["Prior Inventions version",APP_VERSION],["Review cycle","On every new invention, and before signing any employment or contractor agreement"],["Time zone","All times "+(m.timezone||"local")]].map(r=>'<tr><th style="width:200px">'+esc(r[0])+'</th><td>'+esc(r[1])+'</td></tr>').join("")+'</tbody></table></div>';
+    [["Document ID",m.docId||"Not set"],["Owner",(m.name||"")+(m.name?". Every item on this list is owned by "+m.name+" personally.":"")],["Classification","Confidential (Approval List and Register). The Exhibit is written for disclosure."],["Current version",m.docVersion||"0.1 (Draft, becomes 1.0 on approval)"],["Prior Inventions Tracker version",APP_VERSION],["Review cycle","On every new invention, and before signing any employment or contractor agreement"],["Time zone","All times "+(m.timezone||"local")]].map(r=>'<tr><th style="width:200px">'+esc(r[0])+'</th><td>'+esc(r[1])+'</td></tr>').join("")+'</tbody></table></div>';
   h+='<h3 style="font-size:15px">Revision history (oldest first)</h3><div class="tw"><table class="t"><thead><tr><th>Version</th><th>Date</th><th>Time</th><th>Author</th><th>Description of change</th><th>Approved by</th></tr></thead><tbody>'+
     (S.revs.length?S.revs.map(r=>'<tr><td>'+esc(r.version)+'</td><td>'+esc(r.date)+'</td><td>'+esc(r.time)+'</td><td>'+esc(r.author)+'</td><td>'+esc(r.description)+'</td><td>'+esc(r.approvedBy)+'</td></tr>').join(""):'<tr><td colspan="6" class="empty">No revisions yet.</td></tr>')+'</tbody></table></div></div>';
   const acts=S.acts.slice().sort((a,b)=>String(b.startedAt).localeCompare(String(a.startedAt))).slice(0,5);

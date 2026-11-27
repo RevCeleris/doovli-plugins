@@ -13,9 +13,9 @@
       "description": "Organizes your Claude work by subject and checks it daily for time it can give back."
     },
     {
-      "name": "prior-inventions",
-      "displayName": "Prior Inventions",
-      "source": "./plugins/prior-inventions",
+      "name": "prior-inventions-tracker",
+      "displayName": "Prior Inventions Tracker",
+      "source": "./plugins/prior-inventions-tracker",
       "description": "Finds what you built on your own in Claude, dates each item from a record, and builds the prior inventions list an employment agreement asks for."
     },
     {

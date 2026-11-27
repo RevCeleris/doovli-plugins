@@ -1,6 +1,6 @@
 # Third-party notices
 
-The Prior Inventions page loads these open-source libraries from its own lib folder to make Word and PDF downloads. Each is used unchanged, under its own license, reproduced below.
+The Prior Inventions Tracker page loads these open-source libraries from its own lib folder to make Word and PDF downloads. Each is used unchanged, under its own license, reproduced below.
 
 ## docx 9.16.0
 
