@@ -1,7 +1,7 @@
 {
   "name": "career-opportunity-tracker",
   "displayName": "Career Opportunity Tracker",
-  "description": "Career Opportunity Tracker. Finds jobs that match your resume and companies that need your consulting or fractional help, checks each posting is still open, drafts tailored resumes, cover letters and outreach, updates itself from your email if you allow it, and keeps your weekly work search log ready. Nothing is sent for you.",
+  "description": "Career Opportunity Tracker. Finds jobs that match your resume and companies that need your consulting or fractional help, where possible checks each posting is still open, drafts tailored resumes, cover letters and outreach, updates itself from your email if you allow it, and keeps your weekly work search log ready. Nothing is sent for you.",
   "version": "4.4.0",
   "author": {
     "name": "Rich Henderson",

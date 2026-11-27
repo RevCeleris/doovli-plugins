@@ -1,6 +1,6 @@
 # Career Opportunity Tracker
 
-A free tracker that runs in Claude. Twice a week it finds jobs that match your resume and companies that need your consulting or fractional services, checks each posting is still open on the employer's own hiring system, and logs everything in one place. It drafts tailored resumes, cover letters and outreach, updates itself from your email if you allow it, and keeps your weekly unemployment work search log ready to export.
+A free tracker that runs in Claude. Twice a week it finds jobs that match your resume and companies that need your consulting or fractional services, where possible checks each posting is still open on the employer's own hiring system, and logs everything in one place. It drafts tailored resumes, cover letters and outreach, updates itself from your email if you allow it, and keeps your weekly unemployment work search log ready to export.
 
 ## How to use it
 
