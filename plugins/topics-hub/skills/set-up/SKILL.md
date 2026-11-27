@@ -5,8 +5,8 @@ description: "Sets up Topics Hub with Timeback Machine™ for the person: asks f
 
 # Set up Topics Hub with Timeback Machine™
 
-Version 1.2. (c) 2026 Rich Henderson. Shared under CC BY-NC 4.0: free to use and adapt for your own work, with credit. Not for resale or use in a paid product.
-You are setting up Topics Hub with Timeback Machine™, version 1.2, for me, using the Topics Hub plugin I added to Claude. Topics Hub files my Claude work under the subjects I keep coming back to, so I can find things again. Timeback Machine™ is its daily check: it files new work, suggests a topic hub when a subject keeps coming up, keeps those hubs current, and suggests ways to automate work I keep repeating. It only suggests. I approve everything on the page.
+Version 1.3. (c) 2026 Rich Henderson. Shared under CC BY-NC 4.0: free to use and adapt for your own work, with credit. Not for resale or use in a paid product.
+You are setting up Topics Hub with Timeback Machine™, version 1.3, for me, using the Topics Hub plugin I added to Claude. Topics Hub files my Claude work under the subjects I keep coming back to, so I can find things again. Timeback Machine™ is its daily check: it files new work, suggests a topic hub when a subject keeps coming up, keeps those hubs current, and suggests ways to automate work I keep repeating. It only suggests. I approve everything on the page.
 
 Work through the steps in order. Ask me questions only in Step 1, and stop for my answer only there. Write to me in plain language, with no em dashes.
 
@@ -22,7 +22,7 @@ If you cannot read assets/daily.txt from the skill folder, download it too:
 
 Never retype or summarize either file.
 
-Check that topics.html contains const APP_VERSION="1.2" and that daily.txt contains the heading DAILY. If you cannot get both files, tell me in one sentence and point me to the manual install at https://doovli.app/topics-hub.html. Otherwise go on to Step 1 without mentioning the files.
+Check that topics.html contains const APP_VERSION="1.3" and that daily.txt contains the heading DAILY. If you cannot get both files, tell me in one sentence and point me to the manual install at https://doovli.app/topics-hub.html. Otherwise go on to Step 1 without mentioning the files.
 
 ## Rules for everything you write
 
@@ -53,7 +53,7 @@ Give the page these capabilities, declaring them if your artifact tool asks for 
 - Database: one database. Anyone I share the page with can read it, and only I can write to it (rule: path "", read "view", write "owner").
 - User: the page knows who is signed in.
 - Sample: the page can ask Claude directly. It uses this for its search box.
-- Connectors: the scheduled-tasks connector, with the tool fire_trigger (it may be named "Claude Code Remote"). The page uses it for its Yes and Update now buttons.
+- Connectors: the scheduled-tasks connector, with the tools fire_trigger and list_triggers (it may be named "Claude Code Remote"). The page uses them for its Yes, Update now and Run now buttons and its Scheduled view.
 
 If one capability is not available to me, publish the page anyway and tell me in one sentence which feature will not work. Pin the page to my Claude sidebar (your artifact tool's pin option, often called pin_artifact) so it is always one click away. If pinning is not available, tell me in one sentence that I can pin it myself from the page's menu. Keep the link to the published page. The task text calls it {{TOPICS_URL}}.
 
@@ -71,7 +71,7 @@ Do this now, before the first look, without asking me. Tell me in one sentence: 
 
 If a scheduled task named "Timeback Machine" already exists for this page, reuse it. Otherwise create a scheduled task named "Timeback Machine" that runs every day at the time I chose, moved a few minutes off the hour (3:04 PM for 3 PM), in my time zone, with push notifications on. Use the task text as its instructions, with every {{NAME}} replaced by my name, {{TIMEZONE}} by my time zone, {{TOPICS_URL}} by my page link and {{SOURCES}} by the sources I allowed. Give it access to my artifact data, the scheduled-tasks connector and past-chat search, plus only the connectors I allowed in Step 1. Turn off every other connector for this task.
 
-Write the task ID to my page as settings/tasks: {daily: the task ID}, and write settings/update: {installed: "1.2"}. My page then shows that the daily check is on.
+Write the task ID to my page as settings/tasks: {daily: the task ID}, and write settings/update: {installed: "1.3"}. My page then shows that the daily check is on.
 
 If you cannot create scheduled tasks here, tell me in one sentence that my page will show a Turn it on button, and go on with the next step.
 
