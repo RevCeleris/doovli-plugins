@@ -5,24 +5,16 @@ description: "Sets up Topics Hub with Timeback Machine™ for the person: asks f
 
 # Set up Topics Hub with Timeback Machine™
 
-Version 1.3. (c) 2026 Rich Henderson. Shared under CC BY-NC 4.0: free to use and adapt for your own work, with credit. Not for resale or use in a paid product.
-You are setting up Topics Hub with Timeback Machine™, version 1.3, for me, using the Topics Hub plugin I added to Claude. Topics Hub files my Claude work under the subjects I keep coming back to, so I can find things again. Timeback Machine™ is its daily check: it files new work, suggests a topic hub when a subject keeps coming up, keeps those hubs current, and suggests ways to automate work I keep repeating. It only suggests. I approve everything on the page.
+Version 1.4. (c) 2026 Rich Henderson. Shared under CC BY-NC 4.0: free to use and adapt for your own work, with credit. Not for resale or use in a paid product.
+You are setting up Topics Hub with Timeback Machine™, version 1.4, for me, using the Topics Hub plugin I added to Claude. Topics Hub files my Claude work under the subjects I keep coming back to, so I can find things again. Timeback Machine™ is its daily check: it files new work, suggests a topic hub when a subject keeps coming up, keeps those hubs current, and suggests ways to automate work I keep repeating. It only suggests. I approve everything on the page.
 
 Work through the steps in order. Ask me questions only in Step 1, and stop for my answer only there. Write to me in plain language, with no em dashes.
 
 ## Step 0. Get the files
 
-The task text comes with this skill: assets/daily.txt in its skill folder. Read it complete with your code tools. Download the page file with your code tools (for example curl):
+Four files come with this skill, in its assets folder: topics.html (the page), hub.html (the hub page), daily.txt (the task text) and version.json. Read topics.html and daily.txt complete from the skill folder with your code tools. Never retype or summarize them, and never download them from anywhere else.
 
-- https://raw.githubusercontent.com/RevCeleris/topics-timeback/main/topics.html
-
-If you cannot read assets/daily.txt from the skill folder, download it too:
-
-- https://raw.githubusercontent.com/RevCeleris/topics-timeback/main/tasks/daily.txt
-
-Never retype or summarize either file.
-
-Check that topics.html contains const APP_VERSION="1.3" and that daily.txt contains the heading DAILY. If you cannot get both files, tell me in one sentence and point me to the manual install at https://doovli.app/topics-hub.html. Otherwise go on to Step 1 without mentioning the files.
+Check that topics.html contains const APP_VERSION="1.4" and that daily.txt contains the heading DAILY. If you cannot read them, tell me in one sentence that the plugin's files are missing and that removing and adding the Topics Hub plugin again should fix it, then stop. Otherwise go on to Step 1 without mentioning the files.
 
 ## Rules for everything you write
 
@@ -33,7 +25,7 @@ Check that topics.html contains const APP_VERSION="1.3" and that daily.txt conta
 
 ## Step 1. Ask me first
 
-Open with one friendly sentence: "Let's set up your Topics Hub. Five quick choices, then I do the rest." Do not report file downloads or checks unless something failed.
+Open with one friendly sentence: "Let's set up your Topics Hub. Five quick choices, then I do the rest." Do not report file checks unless something failed.
 
 Then ask the five questions below. If you have a tool that shows me clickable choices (often called ask_user_input or AskUserQuestion), use it, one question per card, with the default as the first choice and labeled (default), so I can answer with clicks. Otherwise, ask them as a short numbered list and tell me I can reply with just the numbers I want to change, or "defaults" to accept all of them.
 
@@ -71,7 +63,7 @@ Do this now, before the first look, without asking me. Tell me in one sentence: 
 
 If a scheduled task named "Timeback Machine" already exists for this page, reuse it. Otherwise create a scheduled task named "Timeback Machine" that runs every day at the time I chose, moved a few minutes off the hour (3:04 PM for 3 PM), in my time zone, with push notifications on. Use the task text as its instructions, with every {{NAME}} replaced by my name, {{TIMEZONE}} by my time zone, {{TOPICS_URL}} by my page link and {{SOURCES}} by the sources I allowed. Give it access to my artifact data, the scheduled-tasks connector and past-chat search, plus only the connectors I allowed in Step 1. Turn off every other connector for this task.
 
-Write the task ID to my page as settings/tasks: {daily: the task ID}, and write settings/update: {installed: "1.3"}. My page then shows that the daily check is on.
+Write the task ID to my page as settings/tasks: {daily: the task ID}, and write settings/update: {installed: "1.4"}. My page then shows that the daily check is on.
 
 If you cannot create scheduled tasks here, tell me in one sentence that my page will show a Turn it on button, and go on with the next step.
 
@@ -100,5 +92,5 @@ Do this part only when I ask you to turn on the daily check from the banner on m
 
 1. Find my page: list my artifacts and use the web page with the title I gave you (it ends in "Topics Hub"). Read its settings/main and settings/tasks.
 2. If settings/tasks already has a daily task ID and that scheduled task still exists, tell me it is already on and stop.
-3. Get the task text as in STEP 0. If settings/main has no topicsUrl, write it with my page link.
+3. Get the task text as in Step 0. If settings/main has no topicsUrl, write it with my page link.
 4. Do STEP 4 using the name, time zone, daily time and sources saved in settings/main. Then tell me in one sentence that the daily check is on and my page will show it in green.

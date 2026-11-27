@@ -23,7 +23,7 @@ Setup also creates one scheduled task in your Claude account, named "Timeback Ma
 
 ## Outside connections
 
-During setup and updates, it downloads the page file and task instructions from a public GitHub repository (github.com/RevCeleris/topics-timeback). These downloads send none of your information.
+Topics Hub downloads nothing. The page files and task instructions come inside the plugin, and updates arrive as new plugin versions. It reads only the sources you allow during setup.
 
 ## Sharing
 
