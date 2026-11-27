@@ -721,6 +721,8 @@ copy of the Program in return for a fee.
 
 Source: https://github.com/SheetJS/sheetjs
 
+Modified: raw control characters inside the code's text tables are written as escape sequences (\xNN) so the file is plain text. The code and its behavior are unchanged.
+
 ```
 Apache License
                            Version 2.0, January 2004
