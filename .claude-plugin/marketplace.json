@@ -11,6 +11,18 @@
       "displayName": "Topics Hub with Timeback Machine™",
       "source": "./plugins/topics-hub",
       "description": "Organizes your Claude work by subject and checks it daily for time it can give back."
+    },
+    {
+      "name": "prior-inventions",
+      "displayName": "Prior Inventions",
+      "source": "./plugins/prior-inventions",
+      "description": "Finds what you built on your own in Claude, dates each item from a record, and builds the prior inventions list an employment agreement asks for."
+    },
+    {
+      "name": "career-opportunity-tracker",
+      "displayName": "Career Opportunity Tracker",
+      "source": "./plugins/career-opportunity-tracker",
+      "description": "Finds jobs and consulting or fractional clients, drafts your applications and outreach, and keeps your work search log ready."
     }
   ]
 }

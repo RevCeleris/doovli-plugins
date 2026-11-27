@@ -1,0 +1,27 @@
+{
+  "version": "4.4",
+  "notes": "Career Opportunity Tracker now comes as a Claude plugin. Everything it needs is included, so it no longer loads anything from other websites. Your records do not change.",
+  "url": "https://www.doovli.app/",
+  "history": [
+    {
+      "version": "4.0",
+      "notes": "Week applied filter on the Jobs tab, deeper web searches for posting checks and Go/No-Go checks, a version number on the page, and one-click updates."
+    },
+    {
+      "version": "4.1",
+      "notes": "Run a search for just one profile: a Run for picker next to Run job search now and Run prospect search now searches a single IEP or ICP, or all of them as before."
+    },
+    {
+      "version": "4.2",
+      "notes": "Fewer closed jobs. Before a job is added, Claude now checks the company's hiring system (Greenhouse, Lever, Ashby, Workable, SmartRecruiters or Workday) to confirm the job is still open, and skips any job it cannot read in full on the employer's own page. Jobs already in your tracker get the same check twice a week."
+    },
+    {
+      "version": "4.3",
+      "notes": "Clickable counts. Click any count box on the Dashboard, Jobs or Fractional tab to see exactly those records. A line above the list shows what you are looking at, with a button to go back to the full list. Email updates also now say plainly what Claude changed and what each button does."
+    },
+    {
+      "version": "4.4",
+      "notes": "Career Opportunity Tracker now comes as a Claude plugin. Everything it needs is included, so it no longer loads anything from other websites. Your records do not change."
+    }
+  ]
+}

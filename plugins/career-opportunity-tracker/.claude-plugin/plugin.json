@@ -1,0 +1,25 @@
+{
+  "name": "career-opportunity-tracker",
+  "displayName": "Career Opportunity Tracker",
+  "description": "Career Opportunity Tracker. Finds jobs that match your resume and companies that need your consulting or fractional help, checks each posting is still open, drafts tailored resumes, cover letters and outreach, updates itself from your email if you allow it, and keeps your weekly work search log ready. Nothing is sent for you.",
+  "version": "4.4.0",
+  "author": {
+    "name": "Rich Henderson",
+    "url": "https://www.linkedin.com/in/rich-h-henderson/"
+  },
+  "homepage": "https://doovli.app/",
+  "repository": "https://github.com/RevCeleris/career-opportunity-tracker",
+  "license": "CC-BY-NC-4.0",
+  "icon": "./.claude-plugin/icon.png",
+  "documentationUrl": "https://doovli.app/",
+  "supportUrl": "https://www.linkedin.com/company/doovli/",
+  "privacyPolicyUrl": "https://github.com/RevCeleris/doovli-plugins/blob/main/plugins/career-opportunity-tracker/PRIVACY.md",
+  "keywords": [
+    "job search",
+    "job tracker",
+    "fractional",
+    "consulting",
+    "resume",
+    "cover letter"
+  ]
+}

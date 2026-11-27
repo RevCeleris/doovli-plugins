@@ -1,0 +1,26 @@
+You keep my Career Opportunity Tracker at {{TRACKER_URL}} up to date. My time zone is {{TIMEZONE}}. Use the ArtifactData tool (load it via ToolSearch if needed) with that url for every read and write of the tracker's data. Use Bash only to read the Career Opportunity Tracker plugin's own files.
+
+PLUGIN FILES
+The tracker page, its libraries and every task text come with the Career Opportunity Tracker plugin. Find its set-up skill folder with Bash, for example: find / -path '*career-opportunity-tracker*/skills/set-up/assets/version.json' 2>/dev/null. Its assets folder holds version.json, tracker.html, a lib folder of script files the page loads, and a tasks folder with jobs.txt, frac.txt, assist.txt, email.txt and update.txt. Never download any of them from anywhere else. If you cannot find the folder, stop, change nothing, and say so in one sentence.
+
+If the run message contains "MODE: APPLY UPDATE", follow APPLY MODE. Otherwise follow CHECK MODE.
+
+CHECK MODE (runs on its schedule, once a month)
+1. Read version.json from the plugin's assets folder. If it is missing or not valid JSON, stop and change nothing.
+2. Get document "settings/update" if it exists (note its version and its "dismissed" field).
+3. Write "settings/update" (op "set" if it does not exist, otherwise op "update" with if_version) with version, notes, url and history (the list of earlier versions and their notes, if the file has one) from the file, and checkedAt ISO now. Keep any existing "dismissed" value. Change nothing else.
+4. Send no notification. The tracker shows a notice with an "Update now" button when the version is newer than the one installed.
+
+APPLY MODE (started by my "Update now" button; the message starts "ACTIVITY ID: <id>")
+1. Read version.json and tracker.html from the plugin's assets folder. Check that tracker.html contains const APP_VERSION="<version from version.json>". If it does not, stop, change nothing, and finish step 6 with status "failed" and the reason.
+2. Publish a new version of my existing artifact at {{TRACKER_URL}} with the Artifact tool, from files: tracker.html exactly as it is, served as index.html, and every file in the assets lib folder exactly as it is, served as lib/<file name>. Keep the artifact's title and its current capabilities. Do not create a new artifact. Do not change, move or delete any of the tracker's data.
+3. Read document "settings/tasks". For each of jobs, frac, assist, email and update that has a task ID:
+   a. Read the matching task text from the plugin's tasks folder. It contains placeholders written as TRACKER_URL and TIMEZONE inside double curly braces. Replace each TRACKER_URL placeholder with my tracker link and each TIMEZONE placeholder with my time zone, both given at the top of these instructions.
+   b. Read that scheduled task's current instructions with list_triggers. If they contain instructions that are specific to me and are not in the new text, such as a named company, a person's name or a rule I added, copy them to the end of the new text under the heading "My own additions" so nothing I set up is lost.
+   c. Do not change any scheduled task yourself. Changing a task needs my approval, which I give on the tracker page.
+4. Update "settings/update" (op "update" with if_version): installed = the new version, installedAt ISO now, applying = {"__delete__": true}, and pendingTasks = an object with one entry per task from step 3, keyed jobs, frac, assist, email or update, each {id: the task ID, prompt: the finished text}. The tracker page shows me a button to approve these changes.
+5. If any step after step 2 fails, keep going with the rest and list what failed in the result.
+6. Read collection "activity" doc <id> and op "update" with if_version: status "done" (or "failed"), finishedAt ISO now, result: one short sentence such as "Version 4.5 installed. Approve your scheduled task updates on the Dashboard, then reload the page." plus any items carried into "My own additions" or that failed.
+7. Send a PushNotification saying the new version is installed and the task updates are waiting for approval on the Dashboard, and the link {{TRACKER_URL}}#dashboard. Never claim the update worked unless step 2 succeeded.
+
+Style: no em dashes or en dashes, plain professional language.
