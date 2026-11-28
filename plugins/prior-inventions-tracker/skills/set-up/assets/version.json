@@ -1,4 +1,4 @@
 {
-  "version": "2.1.0",
-  "notes": "Prior Inventions is now the Prior Inventions Tracker, a Claude plugin. Everything it needs is included, so it no longer loads anything from other websites. Your list does not change."
+  "version": "2.1.1",
+  "notes": "Items that need your decision now sit in a box at the top of the Approval List. Choose In, Out or Discuss right there, or use Go to row to jump to the item. The Not set, Discuss and Dates to confirm boxes on the Dashboard take you straight there. Your list does not change."
 }
