@@ -2,7 +2,7 @@
   "name": "prior-inventions-tracker",
   "displayName": "Prior Inventions Tracker",
   "description": "Prior Inventions Tracker. Finds what you built on your own in Claude, dates each item from a record you can check, and builds the list of prior inventions an employment or contractor agreement asks for, with a Word or PDF exhibit for your employer. Nothing goes on the list until you approve it. Not legal advice.",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "author": {
     "name": "Rich Henderson",
     "url": "https://www.linkedin.com/in/rich-h-henderson/"

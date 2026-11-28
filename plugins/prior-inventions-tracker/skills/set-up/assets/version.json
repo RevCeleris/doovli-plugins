@@ -1,4 +1,4 @@
 {
-  "version": "2.1.1",
-  "notes": "Items that need your decision now sit in a box at the top of the Approval List. Choose In, Out or Discuss right there, or use Go to row to jump to the item. The Not set, Discuss and Dates to confirm boxes on the Dashboard take you straight there. Your list does not change."
+  "version": "2.1.2",
+  "notes": "A short message now confirms each choice you make, such as \"S-11 marked In. Saved.\", and tells you when everything is decided. Items that need your decision sit in a box at the top of the Approval List. Your list does not change."
 }
